@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    background-image: url(/img/imgNavBar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+    h1 {
+        color: antiquewhite;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+
+    .inputs {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10%;
+
+        .dateinput {
+            height: 3rem;
+            background: linear-gradient(to right, #BDBEFE, #cccdff, #a9aafd, #8789ff);
+            border: 0;
+        }
+
+        .colunas {
+            label {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                gap: 0.1rem;
+                color: #38396b !important;
+                margin-left: 0.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.container {
+    height: 100vh;
+    margin-top: 5rem;
+
+    .card {
+        .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .cardaovivo {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 0.3rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.aovivo {
+    display: flex;
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: 20px;
+    background-color: red;
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
