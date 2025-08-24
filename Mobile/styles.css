@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -28,15 +35,18 @@ nav {
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        gap: 10%;
+        flex-wrap: wrap;
+        gap: 1rem;
 
         .dateinput {
             height: 3rem;
+            width: 100%;
             background: linear-gradient(to right, #BDBEFE, #cccdff, #a9aafd, #8789ff);
             border: 0;
         }
 
         .colunas {
+            width: 20rem;
             label {
                 display: flex;
                 flex-direction: row;
@@ -51,24 +61,32 @@ nav {
 }
 
 .container {
-    height: 100vh;
-    margin-top: 5rem;
+    display: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: max-content;
+    margin: 5rem 0 5rem 0;
+    justify-content: center;
+    align-items: center;
 
     .card {
+        height: 10rem;
+        width: 23rem !important;
         .card-body {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             flex-direction: column;
 
-            .cardaovivo {
+            .card-subtitle{
                 display: flex;
                 flex-direction: row;
-                flex-wrap: nowrap;
                 justify-content: flex-start;
-                align-items: flex-start;
-                gap: 0.3rem;
+                align-items: center;
                 width: 100%;
+                gap: 0.3rem;
             }
         }
     }
@@ -92,5 +110,13 @@ nav {
 
     50% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    nav{
+        h1{
+            font-size: 3rem;
+        }
     }
 }
