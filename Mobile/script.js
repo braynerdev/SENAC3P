@@ -6,6 +6,7 @@ $("#data_inicial").on("change", function () {
         requisicao(dt_inicial,dt_final);
     }
 });
+
 $("#data_final").on("change", function () {
     const dt_inicial = $(this).val();
     const dt_final = $("#data_inicial").val();
@@ -18,7 +19,6 @@ $("#data_final").on("change", function () {
 function requisicao(dt_inicial, dt_final){
     const datas = limparData(dt_inicial,dt_final);
     const url = `https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL,CHF-BRL,ARS-BRL,BNB-BRL,AUD-BRL,BOB-BRL,COP-BRL,DOGE-BRL,ETH-BRL,GBP-BRL/?start_date=${datas['dt_inicial']}&end_date=${datas['dt_final']}`
-    // sei que o correto seria criar as variaveis das coins e por na url de requisição sendo que eu estava com preguiça.
     fetch(url)
     .then(response => response.json())
     .then(data =>{
