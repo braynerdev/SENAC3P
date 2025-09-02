@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="border rounded shadow p-5">
+    <legend>Login</legend>
+    <form method="post" action="{% url 'login' %}" enctype="multipart/form-data" autocomplete="off">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-12 form-floating">
+                {{ form.username }}
+                <label for="id_username"><span class="text-danger">*</span>{{ form.username.label }}</label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-12 form-floating">
+                {{ form.password }}
+                <label for="id_password"><span class="text-danger">*</span>{{ form.password.label }}</label>
+            </div>
+        </div>
+        {% include 'componentes/submit.html' %}
+    </form>
+</div>
+{% endblock %}
