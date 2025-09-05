@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-container {
+  background: #1b1b1b;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(68, 68, 68, 0.1);
+  width: 400px;
+  text-align: center;
+  color: #727272;
+}
+
+#opcoes button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #cdcdcd;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#opcoes button:hover {
+  background: #565555;
+  color: #9d9d9d;
+}
+
+.correto {
+  background: #4CAF50 !important;
+  color: #fff;
+}
+
+.errado {
+  background: #F44336 !important;
+  color: #fff;
+}
